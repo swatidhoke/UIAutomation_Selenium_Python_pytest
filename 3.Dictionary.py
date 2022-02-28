@@ -1,5 +1,5 @@
  
-#Python Dictnary :
+#1-->Python Dictnary :
 import collections;
 def dict_basic(test_input):
     #Add items
@@ -17,6 +17,7 @@ def dict_basic(test_input):
     #Print input dict
     print(test_input) 
 
+# 2--> flatten a dict
 import copy
 def flatten_dictionary(dictionary):
   
@@ -46,8 +47,25 @@ def flatten_dictionary(dictionary):
   
   return flattenedDict
 
+#3-->Count number of words in a line or a file
+def count_biggest_repeated():
+  counts ={}
+  file ="my name is swati and my kids name is shorya my vikram his father"
 
-##### Test cases
+  words= file.split()
+
+  for word in words:
+      counts[word] = counts.get(word,0)+1
+
+  #find the item repeated the most
+  bigcount = None
+  bigword = None
+  for word,count in counts.items():
+      if bigcount is None or count > bigcount:
+              bigword=word; bigcount=count;
+  return(bigword, bigcount)
+
+ ##### Test cases
 test_dict = {
             "Key1" : "1",
             "Key2" : {
