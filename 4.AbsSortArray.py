@@ -8,7 +8,7 @@ def absSort(arr):
   #      arr[j] , arr[j+1] = arr[j+1] , arr[j]     
   #return arr
   return sorted(arr, key=lessThan)
-
+ #return sorted(arr, key=lambda x: (abs(x),x))
 
 def lessThan(x):
   if x < 0:
