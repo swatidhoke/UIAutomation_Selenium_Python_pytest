@@ -1,3 +1,68 @@
+ # Top 10 Array Functions in Python
+
+# Python Built-in List Functions:
+# 1. len(list) - Returns the number of elements in the list.
+#    Example: len([1, 2, 3]) returns 3.
+#
+# 2. list.append(item) - Adds an item to the end of the list.
+#    Example: [1, 2].append(3) results in [1, 2, 3].
+#
+# 3. list.extend(iterable) - Extends the list by appending elements from an iterable.
+#    Example: [1, 2].extend([3, 4]) results in [1, 2, 3, 4].
+#
+# 4. list.insert(index, item) - Inserts an item at a specified index.
+#    Example: [1, 2].insert(1, 3) results in [1, 3, 2].
+#
+# 5. list.remove(item) - Removes the first occurrence of an item from the list.
+#    Example: [1, 2, 2].remove(2) results in [1, 2].
+#
+# 6. list.pop(index) - Removes and returns the item at the specified index (or the last item if index is not provided).
+#    Example: [1, 2, 3].pop(1) returns 2 and results in [1, 3].
+#
+# 7. list.sort(key=None, reverse=False) - Sorts the list in place.
+#    Example: [3, 1, 2].sort() results in [1, 2, 3].
+#
+# 8. list.reverse() - Reverses the elements of the list in place.
+#    Example: [1, 2, 3].reverse() results in [3, 2, 1].
+#
+# 9. list.count(item) - Returns the number of occurrences of an item in the list.
+#    Example: [1, 2, 2].count(2) returns 2.
+#
+# 10. list.index(item) - Returns the index of the first occurrence of an item in the list.
+#     Example: [1, 2, 3].index(2) returns 1.
+
+# NumPy Array Functions:
+# 1. numpy.array() - Creates an array from a list or tuple.
+#    Example: numpy.array([1, 2, 3]) returns array([1, 2, 3]).
+#
+# 2. numpy.arange(start, stop, step) - Creates an array with values from start to stop (exclusive) with a specified step.
+#    Example: numpy.arange(0, 10, 2) returns array([0, 2, 4, 6, 8]).
+#
+# 3. numpy.linspace(start, stop, num) - Creates an array with num evenly spaced values from start to stop.
+#    Example: numpy.linspace(0, 1, 5) returns array([0. , 0.25, 0.5 , 0.75, 1. ]).
+#
+# 4. numpy.reshape(array, new_shape) - Reshapes the array to the specified shape.
+#    Example: numpy.array([1, 2, 3, 4]).reshape((2, 2)) returns array([[1, 2], [3, 4]]).
+#
+# 5. numpy.flatten() - Flattens a multi-dimensional array into a 1D array.
+#    Example: numpy.array([[1, 2], [3, 4]]).flatten() returns array([1, 2, 3, 4]).
+#
+# 6. numpy.sum(array, axis=None) - Computes the sum of array elements along a specified axis.
+#    Example: numpy.array([[1, 2], [3, 4]]).sum() returns 10.
+#
+# 7. numpy.mean(array, axis=None) - Computes the mean of array elements along a specified axis.
+#    Example: numpy.array([1, 2, 3, 4]).mean() returns 2.5.
+#
+# 8. numpy.max(array, axis=None) - Returns the maximum value of the array along a specified axis.
+#    Example: numpy.array([1, 2, 3, 4]).max() returns 4.
+#
+# 9. numpy.min(array, axis=None) - Returns the minimum value of the array along a specified axis.
+#    Example: numpy.array([1, 2, 3, 4]).min() returns 1.
+#
+# 10. numpy.transpose(array) - Permutes the dimensions of the array.
+#     Example: numpy.array([[1, 2], [3, 4]]).transpose() returns array([[1, 3], [2, 4]]).
+
+
 # 1-->Print an Array and index of an aaray
 def print_array(arr):
     for i in range(1,len(arr)):
