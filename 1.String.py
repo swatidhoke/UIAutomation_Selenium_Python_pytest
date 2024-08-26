@@ -28,3 +28,54 @@
 #
 # 10. str.endswith(suffix) - Checks if the string ends with the specified suffix.
 #     Example: "hello world".endswith("world") returns True.
+
+# 1. Check if a String is a Palindrome
+def is_palindrome(s):
+    return s == s[::-1]
+# Example usage:
+s = "racecar"
+print("Programme is_palindrome",is_palindrome(s))  # Output: True
+
+
+# 2. Count the Number of Vowels in a String
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    vowel_count = 0  # Changed variable name from `sum` to `vowel_count`
+    for char in s:
+        if char in vowels:
+            vowel_count += 1
+    return vowel_count
+# Example usage:
+s = "Hello World"
+print("Programme count_vowels:",count_vowels(s))  # Output: 3
+
+
+# 3. Find the Most Frequent Character in a String
+def most_frequent_char(s):
+    max_count = 0
+    most_frequent = ''
+    for char in s:
+        count = s.count(char)
+        # Optional: Remove the debug print statement
+        # print(count)
+        if count > max_count:
+            max_count = count
+            most_frequent = char
+    return most_frequent
+s = "hello"
+print("Programme most_frequent_char:",most_frequent_char(s))
+
+
+#4. Remove Duplicates from a String
+#This program removes duplicate characters from a string while preserving the original order of characters.
+def remove_duplicates(s):
+    seen = set()
+    result = []
+    for char in s:
+        if char not in seen:
+            seen.add(char)
+            result.append(char)
+    return ''.join(result)
+# Example usage:
+s = "banana"
+print("Programme remove_duplicates:" ,remove_duplicates(s))  # Output: "ban"
