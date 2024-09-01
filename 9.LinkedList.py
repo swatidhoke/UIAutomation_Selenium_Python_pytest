@@ -1,3 +1,4 @@
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -49,19 +50,56 @@ class LinkedList:
         print("None")  # To signify the end of the list
 
 
+    def ReverseLinkedList(self):
+        print("Starting to reverse the linked list")
+        current, previous = self.head, None
+        
+        while current:
+            print(f"Current Node: {current.data}, Previous Node: {previous.data if previous else None}")
+            
+            temp = current.next  # Save the next node
+            print(f"Next node saved: {temp.data if temp else None}")
+            
+            current.next = previous  # Reverse the link
+            print(f"Reversing link: {current.data} now points to {previous.data if previous else None}")
+            
+            previous = current  # Move previous to current node
+            current = temp  # Move to the next node in the original list
+            
+            print(f"Moved to next node: Current is {current.data if current else None}, Previous is {previous.data}")
+
+        self.head = previous  # Update head to the new front of the list
+        print("Linked list reversal complete")
+
+
+    #Take a missdle of linkedlist
+    def FindMiddleOfLinkedList(self):
+        print("Middle of  LinkedList")
+        slow , fast = head ,head.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            
+        
+
 if __name__ == "__main__":
     ll = LinkedList()
     ll.delete_node_at_beginning()  # Expected: Nothing to delete
-    ll.add_node_at_beginning(1)
+    ll.add_node_at_beginning(5)
     ll.print_list()  # Expected: 1 --> None
     ll.add_node_at_beginning(3)
     ll.print_list()  # Expected: 3 --> 1 --> None
-    ll.add_node_at_end(5)
+    ll.add_node_at_end(1)
     ll.print_list()  # Expected: 3 --> 1 --> 5 --> None
-    ll.delete_node_at_beginning()
+    #ll.delete_node_at_beginning()
     ll.print_list()  # Expected: 1 --> 5 --> None
-    ll.add_node_at_beginning("stringtest")
+    ll.add_node_at_beginning("8")
     ll.print_list()  # Expected: stringtest --> 1 --> 5 --> None
-    ll.delete_node_at_end()
+    #`ll.delete_node_at_end()
     ll.print_list()  # Expected: stringtest --> 1 --> None
+    ll.ReverseLinkedList()
+    ll.print_list()
+    ll.FindMiddleOfLinkedList()
+    ll.print_list() 
+
 
