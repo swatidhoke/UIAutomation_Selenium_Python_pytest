@@ -55,6 +55,32 @@ def dict_basic(test_input):
     #Print input dict
     print(test_input) 
 
+from collections import Counter ;
+
+test_string = "SWATI NEEDS A JOB very very URGENTLY."
+
+def string_to_dict_counter(input_str):
+    d_test_string = Counter(input_str.split())
+
+    for word, count in d_test_string.items():
+        print(word.upper(), count)
+
+    sorted_by_keys  = (sorted(d_test_string.items(), reverse = True))
+    print(sorted_by_keys)
+    
+    sorted_by_value = sorted(d_test_string.items() ,key = lambda item: item[1] , reverse = True  )
+    print(sorted_by_value)
+    
+    sorted_using_a_function = sorted(d_test_string.items(), key = test_func)
+    print(sorted_using_a_function)
+
+    
+def test_func(item):
+    # The item is a tuple (key, value), so return the value for sorting
+        return item[1]
+
+string_to_dict_counter(test_string)
+
 # 2--> flatten a dict
 import copy
 def flatten_dictionary(dictionary):
