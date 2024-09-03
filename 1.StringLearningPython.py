@@ -28,6 +28,16 @@
 #
 # 10. str.endswith(suffix) - Checks if the string ends with the specified suffix.
 #     Example: "hello world".endswith("world") returns True.
+
+# Convert each token to lowercase and remove non-alphabetic characters
+#clean_word = ''.join(ch.lower() for ch in word if 'a' <= ch.lower() <= 'z')
+
+#str.count(substring) - this will return the count of a word in a given string
+# text = "hello world, hello universe"
+# count_hello = text.count("hello")
+# print(count_hello)  # Output: 2
+
+
  class StringLearningPython:
     '''
     Some basic usage of String data structure in Python
